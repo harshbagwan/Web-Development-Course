@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists and Styling</title>
+    <style>
+        /* Styling for unordered list */
+        .custom-ul {
+            list-style-type: square;
+            list-style-position: inside;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Styling for ordered list */
+        .custom-ol {
+            list-style-type: upper-roman;
+            list-style-position: inside;
+            background-color: #ffebcd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Custom bullets using an image */
+        .image-list {
+            list-style-image: url('https://upload.wikimedia.org/wikipedia//5/5e/RedDot.');
+        }
+
+        /* Styling for description list */
+        .definition-list {
+            background-color: #d8bfd8;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Style for dt (term) */
+        dt {
+            font-weight: bold;
+            color: #2e4053;
+        }
+
+        /* Style for dd (description) */
+        dd {
+            margin-left: 20px;
+            font-style: italic;
+        }
+
+        /* Unique ID styling */
+        #unique-item {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Reusable class styling */
+        .highlight {
+            background-color: yellow;
+            padding: 3px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Unordered List with Custom Styling</h2>
+    <ul class="custom-ul">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+
+    <h2>Ordered List with Upper Roman Style</h2>
+    <ol class="custom-ol">
+        <li>Introduction to HTML</li>
+        <li>CSS Basics</li>
+        <li>JavaScript Essentials</li>
+    </ol>
+
+    <h2>List with Image as Bullet</h2>
+    <ul class="image-list">
+        <li>Python</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Description List Example</h2>
+    <dl class="definition-list">
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+
+        <dt>JavaScript</dt>
+        <dd>A scripting language for web development</dd>
+    </dl>
+
+    <h2>Example of <code>id</code> and <code>class</code></h2>
+    <p id="unique-item">This is a unique paragraph with an ID.</p>
+    <p class="highlight">This text is highlighted using a class.</p>
+    <p class="highlight">Another highlighted paragraph using the same class.</p>
+
+</body>
+</html>
