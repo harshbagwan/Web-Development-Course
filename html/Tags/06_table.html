@@ -6,29 +6,44 @@
     <title>Document</title>
 
     <style>
-        table,tr,td{
-            border: 1px solid blueviolet;
+        table,tr,td,th{
+            border: 2px solid green;
             border-collapse: collapse;
         }
+    
+    caption{
+        /* padding: 10px; */
+        caption-side: bottom;
+    }
     </style>
 </head>
 <body>
     <table>
-        <tr>
-            <td>Month</td>
-            <td>Salary</td>
-        </tr>
-        <tr>
-            <td>January</td>
-            <td>500000</td>
-        </tr>
-        <tr>
-            <td>February</td>
-            <td>600000</td>
-        </tr>
+        <caption>My First Saving</caption>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>500000</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>600000</td>
+            </tr>
+        </tbody>
 
-
-
+        <tfoot>
+            <td>Total</td>
+            <td>1000000</td>
+        </tfoot>
     </table>
+
+
+
 </body>
 </html>
