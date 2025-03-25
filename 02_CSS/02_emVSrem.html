@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM vs REM Example</title>
+    <style>
+        html {
+            font-size: 16px; /* root font size */
+        }
+        .parent {
+            font-size: 20px; /* parent font size */
+            border: 2px solid gray;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .child-em {
+            font-size: 2em; /* 2 × parent font size */
+            color: blue;
+        }
+        .child-rem {
+            font-size: 2rem; /* 2 × root font size (always 16px by default) */
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>EM vs REM Demo</h1>
+
+    <div class="parent">
+        <p>This parent has a font size of 20px.</p>
+        <p class="child-em">This child uses 2em — it becomes 40px (2 × 20).</p>
+        <p class="child-rem">This child uses 2rem — it becomes 32px (2 × 16, root size).</p>
+    </div>
+
+    <div class="parent" style="font-size:30px;">
+        <p>This parent has a font size of 30px.</p>
+        <p class="child-em">This child uses 2em — it becomes 60px (2 × 30).</p>
+        <p class="child-rem">This child uses 2rem — still 32px (2 × 16, root size doesn't change).</p>
+    </div>
+</body>
+</html>

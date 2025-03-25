@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            height: 100px;
+            width: 200px;
+            margin: 10px;
+            border: 1px solid black;
+            padding: 30px;
+
+            /* incase we dont want to increase the size of a block then box-sizing is used */
+            box-sizing: border-box;
+        }
+        #org{
+            background-color: #FF0000;
+        }
+        #white{
+            background-color: rgb(29,152,159) ;
+        }
+        #green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="org">A</div>
+    <div class="box" id="white">B</div>
+    <div class="box" id="green">C</div>
+</body>
+</html>
