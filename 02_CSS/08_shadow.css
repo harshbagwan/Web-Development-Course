@@ -1,0 +1,73 @@
+h1{
+    text-shadow: 2px 2px 2px red;
+}
+
+.box{
+    height: 200px;
+    width: 300px;
+    background-color: cyan;
+    box-shadow: -12px -12px 10px cornflowerblue , 10px 10px 10px cornflowerblue ;
+}
+.box2 {
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.5);
+  }
+
+  .animated-box {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.7);
+    transition: box-shadow 0.3s;
+    animation: pulse-border 1.5s infinite alternate;
+  }
+  
+  @keyframes pulse-border {
+    0% {
+      box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 15px 10px rgba(255, 0, 0, 0.2);
+    }
+  }
+
+  
+  .animated-box-2{
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    animation: colorful-border 2s infinite linear;
+  }
+  
+  @keyframes colorful-border {
+    0% {
+      box-shadow: 0 0 0 5px red;
+    }
+    25% {
+      box-shadow: 0 0 0 5px orange;
+    }
+    50% {
+      box-shadow: 0 0 0 5px green;
+    }
+    75% {
+      box-shadow: 0 0 0 5px blue;
+    }
+    100% {
+      box-shadow: 0 0 0 5px red;
+    }
+  }
+  
