@@ -1,0 +1,62 @@
+.container{
+    border: 1px solid brown;
+    background-color: #ffff00;
+    height: 700px;
+    width: 600px;
+
+display: grid;  
+grid-template-columns: 100px 100px 100px;
+grid-template-rows: 100px 100px;
+
+grid-gap: 10px;
+
+/*
+HORIZONTAL
+justify-content: start;
+justify-content: end;
+justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+*/
+
+/*
+VERTICAL
+align-content: space-between;
+align-content: space-evenly;
+align-content: space-around;
+*/
+
+/*
+HORIZONTAL
+justify-items: start;
+justify-items: baseline;
+justify-items: center; 
+justify-items: end;
+*/
+
+/*
+vertical
+align-items: start;
+align-items: stretch;
+align-items: baseline;
+align-items: end; 
+*/
+}
+
+.box{
+    border: 1px solid red;
+    background-color: aqua;
+}
+#box1 {
+    justify-self: start;
+    /* 
+     horizontal axis ke andar block starting me shift ho jayga  
+    justify-self: end;
+    justify-content: center; */
+/* 
+    align-self: center;
+    align-self: end;
+    align-self: start; */
+}
+

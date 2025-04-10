@@ -1,0 +1,68 @@
+*{
+    /* margin: 0px; we can override them
+    padding: 0px; */
+    box-sizing: border-box;
+}
+
+.container{
+    height: 500px ;
+    border: 2px solid green;
+    /* by defalult main axis pe stack ho jayenge sare element */
+    display:flex;
+    /* to change main axis direction to vertical */
+    /* flex-direction: column;
+    flex-direction: row-reverse;
+    flex-direction: row;
+    flex-direction: column-reverse; */
+
+    /* flex-wrap: wrap; */
+    /* flex-wrap: nowrap;
+    flex-wrap: wrap-reverse; */
+
+    /* flex-flow: row wrap;  */
+/* 
+    justify-content: flex-start ;
+    justify-content: flex-end; */
+    justify-content: center;
+    /* justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: space-between; */
+
+    /* stretch is default  */ 
+    align-items: stretch;
+    /* align-items: flex-start;
+    align-items: flex-end; */
+    align-items: center;
+    /* to match the baseline  */
+    /* align-items: baseline;  */
+
+    /* gap: 10px;  */
+    /* align-content: flex-end;
+    align-content: flex-start;
+    align-content: center; */
+    align-content: space-between;
+
+}
+.box{
+    border : 1px solid red;
+    background-color: bisque;
+    /* even after doing width hardcore it is squeezing */
+    /* width: 80px; */
+    flex-basis: 80px;
+
+    /* so use wrap */
+
+    /* puri width lelenge saare  */
+    /* flex-grow: 1; */
+}
+
+#box1{
+    order:1;
+    /* flex-grow: 1;  */
+    flex-shrink: 4;
+}
+#box3{
+    order: 2;
+    flex-shrink: 2;
+}
+

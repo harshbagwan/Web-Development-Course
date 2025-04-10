@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransparencyVSopacityk</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 250px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* 1️⃣ Opacity (Everything fades) */
+        .opacity-box {
+            background-color: blue;
+            opacity: 0.5; /* Everything becomes 50% transparent */
+        }
+
+        /* 2️⃣ RGBA (Only Background Transparent, Text Stays Normal) */
+        .rgba-box {
+            background-color: rgba(0, 0, 255, 0.5); /* 50% transparent */
+            color: black; /* Text remains fully visible */
+        }
+
+        /* 3️⃣ Transparent Background */
+        .transparent-box {
+            background-color: transparent;
+            border: 2px solid blue;
+            color: blue; /* Text is still visible */
+        }
+
+        /* 4️⃣ Drop Shadow for PNG Image */
+        .image-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        img {
+            width: 150px;
+            filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5)); /* Shadow follows image shape */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box opacity-box">Opacity: 0.5</div>
+    <div class="box rgba-box">RGBA Background</div>
+    <div class="box transparent-box">Transparent Background</div>
+
+    <div class="image-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="Transparent PNG">
+    </div>
+
+</body>
+</html>

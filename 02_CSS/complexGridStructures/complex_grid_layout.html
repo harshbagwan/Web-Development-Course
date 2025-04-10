@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complex Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #1e1e2f;
+      color: #fff;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "sidebar cards"
+        "footer footer";
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 80px 1fr 200px 60px;
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      grid-area: header;
+      background: #3a3a5d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: #2e2e45;
+      padding: 20px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #4b4b70;
+      padding: 20px;
+    }
+
+    .cards {
+      grid-area: cards;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .card {
+      background: #5c5c8a;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: #3a3a5d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar Menu</div>
+    <div class="main">Main Content Area</div>
+    <div class="cards">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+    </div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>

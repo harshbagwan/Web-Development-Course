@@ -1,22 +1,23 @@
 .image-container {
+    border: 2px solid black;
     position: relative;
-    width: 500px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
+    width: 408px; /* Adjust as needed */
+    height: 612px; /* Adjust as needed */
 }
 
-.image-container img {
+ .image-container img {
     width: 100%;
     height: 100%;
     display: block;
-}
+}  
 
 .corner, .center {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 1);
+    color:rgba(0, 255, 1);
+    padding: 5px 25px;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 /* Positioning */
@@ -27,5 +28,6 @@
 .center { 
     top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
+

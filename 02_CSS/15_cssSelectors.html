@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* 1️⃣ Universal Selector - Applies to all elements */
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2️⃣ Descendant Selector - Selects all <p> inside <div> */
+        div p {
+            color: red;
+            font-size: 18px;
+        }
+
+        /* 3️⃣ Child Selector - Selects only direct <p> children of <div> */
+        div > p {
+            font-weight: bold;
+        }
+
+        /* 4️⃣ Adjacent Sibling Selector - Selects first <p> after <h1> */
+        h1 + p {
+            color: blue;
+            font-style: italic;
+        }
+
+        /* 5️⃣ General Sibling Selector - Selects all <p> after <h2> */
+        h2 ~ p {
+            background-color: lightyellow;
+            padding: 5px;
+        }
+
+        /* 6️⃣ Attribute Selector - Selects all elements with 'required' */
+        input[required] {
+            border: 2px solid red;
+        }
+
+        /* 7️⃣ Attribute Exact Match - Selects input fields with type="password" */
+        input[type="password"] {
+            background-color: lightgray;
+        }
+
+        /* 8️⃣ Attribute Contains - Selects links containing "google" in href */
+        a[href*="google"] {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* 9️⃣ Attribute Starts With - Selects inputs where name starts with "user" */
+        input[name^="user"] {
+            border: 2px solid blue;
+        }
+
+        /* 🔟 Attribute Ends With - Selects images ending with ".jpg" */
+        img[src$=".jpg"] {
+            border-radius: 10px;
+            border: 3px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 2px solid black; display: inline-block; padding: 5px;">10</div>
+
+    <h1>CSS Selectors Demo</h1>
+
+    <p>This paragraph is selected using the <b>Adjacent Sibling Selector (h1 + p)</b>.</p>
+    
+    <h2>Subheading</h2>
+    <p>This paragraph is selected using the <b>General Sibling Selector (h2 ~ p)</b>.</p>
+    <p>Another selected paragraph using the same rule.</p>
+
+    <div>
+        <p>This paragraph inside div is selected using the <b>Descendant Selector (div p)</b>.</p>
+        <p>This paragraph is selected using both <b>Descendant and Child Selector (div > p)</b>.</p>
+        <section>
+            <p>This paragraph is inside a section, so <b>Child Selector does not apply</b>.</p>
+        </section>
+    </div>
+
+    <h3>Forms</h3>
+    <input type="text" required placeholder="Required Field">
+    <input type="text" placeholder="Not Required">
+    <input type="password" placeholder="Password Field">
+    <input type="email" name="user_email" placeholder="User Email">
+    <input type="text" name="username" placeholder="Username">
+
+    <h3>Links</h3>
+    <a href="https://www.google.com">Google Link</a><br>
+    <a href="https://www.github.com">GitHub Link</a>
+
+    <h3>Images</h3>
+    <img src="photo.jpg" width="100" alt="Sample Image"> <!-- Selected -->
+    <img src="logo.png" width="100" alt="Sample Image"> <!-- Not Selected -->
+
+</body>
+</html>

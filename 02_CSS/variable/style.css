@@ -1,0 +1,18 @@
+:root{
+    /* VARIABLE  */
+    --dark-green: #233432;
+}
+.container{
+    border:3px solid brown;
+    background-color: green;
+    height: 300px;
+    width: 300px;
+    background-color: var(--dark-green);
+}
+
+.box{
+    border: 2px solid green;
+    background-color: aqua;
+    color: var(--dark-green);
+
+}
